@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.1.0 — Implementation freeze
+## Implementation baseline
 
 - Replaced prompt-heavy rule architecture with local Policy/Risk/Evidence/Verification/State/Decision engines.
 - Added automatic project profiling and cached fingerprints.

@@ -1,4 +1,4 @@
-# The Kessler Constitution — 2.1
+# The Kessler Constitution
 
 This document states the architectural invariants of Kessler Protocol. It is **not** an always-on prompt file.
 

@@ -6,9 +6,9 @@
 
 Kessler moves those decisions **out of the prompt** and into a local policy runtime. The model only receives context when an intervention is relevant.
 
-## What 2.1 changes
+## What Kessler changes
 
-Kessler 2.1 is no longer a large rulebook injected into every turn. It is a small always-on invariant layer plus executable engines:
+Kessler uses a small always-on invariant layer plus executable engines instead of injecting a large rulebook into every turn:
 
 - **Project Profiler** — detects stack, architecture signals, verification commands and risk automatically.
 - **Risk Engine** — classifies the project and selects proportional strictness.
@@ -185,6 +185,10 @@ kessler rollback --target antigravity --surface ide
 `benchmarks/` defines the reproducibility contract for comparing the same coding tasks **with and without** Kessler. The benchmark is designed to measure both benefit and cost: task success, security regressions, fake-success behavior, verification quality, false interventions, tool calls, latency and token overhead.
 
 No benchmark result is claimed until the fixtures, run counts, harness/model versions and raw scoring evidence are published.
+
+## Open-source maintenance
+
+Kessler is MIT licensed and welcomes scoped, evidence-backed contributions. See [CONTRIBUTING.md](CONTRIBUTING.md) for the development and review rules, [SECURITY.md](SECURITY.md) for private vulnerability reporting guidance, and [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) for the current support boundary. The CI matrix and KesslerBench methodology are public so maintainers and users can reproduce claims. Adoption, benchmark outcomes, and live harness certification are reported only when there is evidence.
 
 ## Development
 

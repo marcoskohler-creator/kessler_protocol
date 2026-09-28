@@ -1,4 +1,4 @@
-# Implementation Validation — Kessler Protocol 2.1
+# Implementation Validation — Kessler Protocol
 
 Validation date: 2026-09-28
 

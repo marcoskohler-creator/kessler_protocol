@@ -10,7 +10,7 @@ Every published result must include:
 - exact prompt;
 - model and model version;
 - harness and harness version;
-- Kessler version and config;
+- Kessler commit SHA and config;
 - temperature/approval mode when exposed;
 - number of repeated runs;
 - raw anonymized outputs or machine-readable scores;

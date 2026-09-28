@@ -1,6 +1,6 @@
-# Kessler Protocol 2.1
+# Kessler Protocol
 
-O Kessler é uma camada local, determinística e proporcional ao risco para agentes de programação. A versão 2.1 tira políticas do prompt e as executa fora do LLM sempre que a decisão puder ser determinada por código.
+O Kessler é uma camada local, determinística e proporcional ao risco para agentes de programação. Ele tira políticas do prompt e as executa fora do LLM sempre que a decisão puder ser determinada por código.
 
 ## Princípio central
 

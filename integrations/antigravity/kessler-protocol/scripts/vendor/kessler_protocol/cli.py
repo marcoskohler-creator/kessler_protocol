@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-from . import __version__
 from .config import init_config, load_config
 from .context_budget import measure as context_budget
 from .doctor import package_checks, installed_checks
@@ -29,7 +28,6 @@ def _surface(target,args):
 
 def main(argv=None):
     p=argparse.ArgumentParser(prog="kessler",description="Kessler Protocol — deterministic safety and evidence layer for agentic coding")
-    p.add_argument("--version",action="version",version=__version__)
     sub=p.add_subparsers(dest="cmd",required=True)
 
     sp=sub.add_parser("init",help="Create minimal project config and auto-profile the workspace")

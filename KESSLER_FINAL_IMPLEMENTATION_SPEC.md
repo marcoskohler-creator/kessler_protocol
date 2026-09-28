@@ -1,7 +1,6 @@
-# KESSLER PROTOCOL 2.1 — FINAL IMPLEMENTATION SPECIFICATION
+# KESSLER PROTOCOL — FINAL IMPLEMENTATION SPECIFICATION
 
 **Status:** implementation freeze / release candidate architecture complete  
-**Version:** 2.1.0  
 **Date:** 2026-09-28  
 **Scope:** deterministic safety, evidence, verification and risk control for agentic coding assistants  
 **Primary implemented adapters:** Google Antigravity 2.0 / IDE / CLI and Gemini CLI
@@ -10,7 +9,7 @@
 
 ## 1. Executive summary
 
-Kessler Protocol 2.1 replaces the original prompt-heavy “constitutional rules” concept with a **local executable control plane**.
+Kessler Protocol replaces the original prompt-heavy “constitutional rules” concept with a **local executable control plane**.
 
 The central architectural decision is:
 
@@ -62,13 +61,13 @@ The original Kessler V1 correctly identified many of these failure classes, but 
 - no rollback manifest;
 - no explicit token budget.
 
-Kessler 2.1 is the replacement architecture.
+This is the replacement architecture.
 
 ---
 
 # 3. Goals
 
-Kessler 2.1 MUST:
+Kessler MUST:
 
 - prevent narrowly-defined catastrophic operations deterministically;
 - elevate destructive actions in a harness-appropriate way;
@@ -84,7 +83,7 @@ Kessler 2.1 MUST:
 - never claim adapter support without implemented installation + contract tests;
 - support reproducible benchmarking of benefits and costs.
 
-Kessler 2.1 MUST NOT:
+Kessler MUST NOT:
 
 - try to replace a full static analyzer;
 - claim that a regex proves a security flaw or fake implementation;
@@ -144,7 +143,6 @@ Harness packages are adapters, not the source of truth.
 ```text
 kessler_protocol_final/
 ├── pyproject.toml
-├── VERSION
 ├── README.md
 ├── README.pt-BR.md
 ├── KESSLER_FINAL_IMPLEMENTATION_SPEC.md
@@ -1127,7 +1125,7 @@ Kessler records:
 
 A future graph engine can extend this into callers/imports/tests/blast-radius analysis.
 
-Current 2.1 intentionally does not pretend that “one grep call” guarantees adequate architectural discovery.
+The current implementation intentionally does not pretend that “one grep call” guarantees adequate architectural discovery.
 
 ---
 
@@ -1176,7 +1174,7 @@ Important hardening properties implemented:
 
 # 32. Privacy model
 
-Kessler 2.1 performs project discovery locally.
+Kessler performs project discovery locally.
 
 The core implementation does not require sending project files to an additional external model merely to calculate risk or select policies.
 
@@ -1379,7 +1377,7 @@ This is the remaining release-certification activity, not an architectural redes
 
 ---
 
-# 40. Acceptance criteria for 2.1
+# 40. Acceptance criteria
 
 ## Architecture
 
@@ -1443,13 +1441,13 @@ This is the remaining release-certification activity, not an architectural redes
 
 ---
 
-# 42. Next engineering phase after 2.1
+# 42. Next engineering phase
 
 Do not add more generic rules first.
 
 Priority order:
 
-## 2.2 — Dependency/verification intelligence
+## Dependency and verification intelligence
 
 - build lightweight import/caller graph;
 - map changed paths to nearest tests;
@@ -1493,7 +1491,7 @@ Because a large persistent rule set creates four problems:
 3. reduced salience of important rules;
 4. coupling between framework growth and model context size.
 
-Kessler 2.1 instead treats policies as executable data.
+Kessler instead treats policies as executable data.
 
 The LLM only receives semantic guidance when deterministic enforcement cannot complete the task itself.
 
@@ -1547,7 +1545,7 @@ Semantic/model-assisted policy evaluation may be added later only for categories
 
 # 47. Release recommendation
 
-The **implementation architecture is closed for 2.1**.
+The **implementation architecture is complete for the current release**.
 
 No additional conceptual layer is required before testing.
 
