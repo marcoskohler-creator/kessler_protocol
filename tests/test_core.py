@@ -12,7 +12,7 @@ from kessler_protocol.hook_runtime import run
 from kessler_protocol.installers import install_antigravity, install_gemini, uninstall_antigravity, uninstall_gemini
 from kessler_protocol.policies import get_policy
 from kessler_protocol.profiler import get_profile
-from kessler_protocol.state import load
+from kessler_protocol.state import key, load
 
 
 class TempHome(unittest.TestCase):
@@ -53,6 +53,12 @@ class ProfileTests(TempHome):
 
 
 class HookTests(TempHome):
+    def test_workspace_aliases_share_state(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            alias=root/"nested"/".."
+            self.assertEqual(key("same-session",str(root)),key("same-session",str(alias)))
+
     def _project(self):
         td=tempfile.TemporaryDirectory(); root=Path(td.name)
         (root/"package.json").write_text(json.dumps({"scripts":{"test":"vitest","build":"next build"},"dependencies":{"next":"1"}}))

@@ -14,7 +14,7 @@ Validation date: 2026-09-28
 
 ## Test count at freeze
 
-12 automated tests.
+13 automated tests.
 
 ## Context budget at freeze
 

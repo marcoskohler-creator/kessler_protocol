@@ -19,7 +19,10 @@ def _state_root() -> Path:
 
 
 def key(session_id: str, workspace: str = "") -> str:
-    return hashlib.sha256((str(session_id) + "|" + str(workspace)).encode()).hexdigest()[:32]
+    # Hook payloads and direct callers can name the same workspace differently
+    # (for example /var vs /private/var on macOS). Keep their state together.
+    canonical_workspace = os.path.normcase(str(Path(workspace).resolve())) if workspace else ""
+    return hashlib.sha256((str(session_id) + "|" + canonical_workspace).encode()).hexdigest()[:32]
 
 
 def path_for(session_id: str, workspace: str = "") -> Path:
