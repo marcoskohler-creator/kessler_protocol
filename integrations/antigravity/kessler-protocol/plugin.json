@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "kessler-protocol",
+  "description": "Risk-proportional engineering safety rules and executable evidence gates for agentic coding."
+}

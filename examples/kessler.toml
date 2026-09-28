@@ -1,0 +1,22 @@
+version = 1
+strictness = "auto"
+context = "lean"
+
+[profile]
+auto = true
+cache = true
+
+[verification]
+auto_detect = true
+required = []
+
+[policy]
+lazy_loading = true
+
+[paths]
+sensitive = ["src/payments/**", "infra/prod/**"]
+ignore = [".git", ".kessler/cache", "node_modules", ".next", "dist", "build", ".venv", "venv", "vendor", "target"]
+
+[commands]
+allow = []
+deny = ["terraform\\s+destroy"]
