@@ -1,0 +1,62 @@
+[
+  {
+    "provider": "gemini",
+    "model": "gemini-3.7-flash",
+    "api_key_env": "KB_GEMINI_KEY_NOVA1"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "api_key_env": "KB_GEMINI_KEY_NOVA2"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "api_key_env": "KB_GEMINI_KEY_NOVA3"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "api_key_env": "KB_GEMINI_KEY_FREEBETA"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite-preview",
+    "api_key_env": "KB_GEMINI_KEY_FREEGAMMA"
+  },
+  {
+    "provider": "nvidia",
+    "model": "openai/gpt-oss-20b",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "meta/llama-3.2-11b-vision-instruct",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "poolside/laguna-xs-2.1:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "qwen/qwen3.8-27b:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  }
+]

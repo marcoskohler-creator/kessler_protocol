@@ -1,0 +1,22 @@
+[
+  {
+    "provider": "openrouter",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "qwen/qwen3.8-27b:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "poolside/laguna-xs-2.1:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  }
+]

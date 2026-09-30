@@ -1,0 +1,72 @@
+[
+  {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "api_key_env": "KB_GEMINI_KEY_NOVA1"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite-preview",
+    "api_key_env": "KB_GEMINI_KEY_NOVA2"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "api_key_env": "KB_GEMINI_KEY_NOVA3"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-flash-lite-latest",
+    "api_key_env": "KB_GEMINI_KEY_FREEBETA"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3-flash-preview",
+    "api_key_env": "KB_GEMINI_KEY_FREEGAMMA"
+  },
+  {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "api_key_env": "KB_GEMINI_KEY_FREEDELTA"
+  },
+  {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "meta/llama-3.2-11b-vision-instruct",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "poolside/laguna-xs-2.1",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "google/gemma-4-31b-it",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "01-ai/yi-large",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  },
+  {
+    "provider": "openrouter",
+    "model": "inclusionai/ling-3.0-flash-sante:free",
+    "api_key_env": "KB_OPENROUTER_KEY"
+  }
+]

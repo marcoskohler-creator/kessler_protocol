@@ -1,0 +1,24 @@
+# Kessler Protocol project configuration
+# Most settings are intentionally automatic. Manual values override detection.
+version = 1
+strictness = "auto" # auto | balanced | strict | paranoid
+context = "lean"    # lean | standard | deep
+
+[profile]
+auto = true
+cache = true
+
+[verification]
+auto_detect = true
+required = []
+
+[policy]
+lazy_loading = true
+
+[paths]
+sensitive = []
+ignore = [".git", ".kessler/cache", "node_modules", ".next", "dist", "build", ".venv", "venv", "vendor", "target"]
+
+[commands]
+allow = []
+deny = []

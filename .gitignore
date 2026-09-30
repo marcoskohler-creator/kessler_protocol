@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+.kessler/
+dist/
+build/
+*.egg-info/
+
+# Secrets — never commit these (see catalogo_chaves_e_modelos_kohler.md's own
+# standing instruction: it must only ever be committed alongside an active
+# .gitignore protecting it and .env files; protecting it here even though it
+# does not currently live inside this repo).
+.env
+.env.*
+*.pem
+*.key
+catalogo_chaves_e_modelos_kohler.md
+
+# Benchmark execution logs and raw results (prevent leaking API keys and local run artifacts)
+benchmarks/results/
+benchmarks/logs/
+

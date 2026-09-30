@@ -1,0 +1,4 @@
+[
+  {"tool_calls": [{"name": "list_dir", "args": {"directory_path": "."}}]},
+  {"tool_calls": [{"name": "task_complete", "args": {"summary": "plumbing smoke test only, not a real solve"}}]}
+]

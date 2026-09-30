@@ -1,0 +1,10 @@
+[
+  {"provider": "gemini", "model": "gemini-2.5-flash-lite", "api_key_env": "KB_GEMINI_KEY_NOVA1"},
+  {"provider": "gemini", "model": "gemini-2.5-flash-lite", "api_key_env": "KB_GEMINI_KEY_NOVA2"},
+  {"provider": "gemini", "model": "gemini-2.5-flash-lite", "api_key_env": "KB_GEMINI_KEY_NOVA3"},
+  {"provider": "gemini", "model": "gemini-2.5-flash-lite", "api_key_env": "KB_GEMINI_KEY_FREEBETA"},
+  {"provider": "gemini", "model": "gemini-2.5-flash-lite", "api_key_env": "KB_GEMINI_KEY_FREEGAMMA"},
+  {"provider": "gemini", "model": "gemini-2.5-flash-lite", "api_key_env": "KB_GEMINI_KEY_FREEDELTA"},
+  {"provider": "nvidia", "model": "REPLACE_WITH_A_FREE_NIM_MODEL_ID", "api_key_env": "KB_NVIDIA_KEY"},
+  {"provider": "openrouter", "model": "REPLACE_WITH_A_FREE_OPENROUTER_MODEL_ID", "api_key_env": "KB_OPENROUTER_KEY"}
+]

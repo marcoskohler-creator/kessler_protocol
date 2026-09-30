@@ -1,0 +1,17 @@
+[
+  {
+    "provider": "nvidia",
+    "model": "openai/gpt-oss-20b",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "api_key_env": "KB_NVIDIA_KEY"
+  },
+  {
+    "provider": "nvidia",
+    "model": "meta/llama-3.2-11b-vision-instruct",
+    "api_key_env": "KB_NVIDIA_KEY"
+  }
+]

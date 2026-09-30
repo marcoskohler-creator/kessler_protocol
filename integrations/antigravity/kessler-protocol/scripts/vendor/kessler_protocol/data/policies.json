@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "policies": [
+    {
+      "id": "KES-OPS-001",
+      "title": "Catastrophic system operation",
+      "severity": "R4",
+      "kind": "command",
+      "action": "deny",
+      "patterns": [
+        "(^|[;&|]\\s*)rm\\s+-rf\\s+/(?:\\s|$|[*])",
+        "\\bmkfs(?:\\.|\\s)",
+        "\\bdd\\s+[^\\n]*\\bof=/dev/",
+        ":\\(\\)\\s*\\{\\s*:\\|:\\s*&\\s*\\}\\s*;\\s*:"
+      ],
+      "summary": "Blocks narrowly-defined commands capable of catastrophic host or filesystem damage.",
+      "remediation": "Use a scoped command against the intended project resource and document the target explicitly."
+    },
+    {
+      "id": "KES-OPS-002",
+      "title": "Destructive repository or data operation",
+      "severity": "R3",
+      "kind": "command",
+      "action": "confirm",
+      "patterns": [
+        "\\bgit\\s+reset\\s+--hard\\b",
+        "\\bgit\\s+clean\\s+-[^\\s]*[fdx][^\\s]*",
+        "\\brm\\s+-rf\\b",
+        "\\b(?:drop\\s+(?:table|database)|truncate\\s+table)\\b"
+      ],
+      "summary": "Requires explicit awareness before destructive source-control, filesystem, or database operations.",
+      "remediation": "Confirm the exact target, backup/rollback path, and why a non-destructive alternative is insufficient."
+    },
+    {
+      "id": "KES-SEC-001",
+      "title": "Sensitive boundary modification",
+      "severity": "R3",
+      "kind": "path",
+      "action": "sensitive",
+      "patterns": [
+        "(^|[/\\\\])(?:\\.env(?:\\.|$)|secrets?|credentials?|auth(?:entication|orization)?|iam|payments?|billing|migrations?)([/\\\\]|$)"
+      ],
+      "summary": "Marks writes to authentication, secrets, payment, and migration boundaries as elevated risk.",
+      "remediation": "Inspect dependent code paths and execute relevant verification before completion."
+    },
+    {
+      "id": "KES-TRUTH-001",
+      "title": "Potential fake-success implementation",
+      "severity": "R2",
+      "kind": "content",
+      "action": "warn",
+      "patterns": [
+        "setTimeout\\s*\\(",
+        "NotImplemented(?:Error)?",
+        "TODO[: ]",
+        "mock(?:Data|Response|User|Items)?\\s*="
+      ],
+      "summary": "Flags code patterns that can indicate placeholder behavior being presented as completed integration.",
+      "remediation": "Confirm the placeholder is explicit test/prototype code or replace it with the real integration before claiming completion."
+    },
+    {
+      "id": "KES-PLAN-001",
+      "title": "Implementation requires a registered plan",
+      "severity": "R2",
+      "kind": "planning",
+      "action": "deny",
+      "patterns": [],
+      "summary": "Blocks direct edits and shell commands until a complete, evidence-based plan is registered for this agent turn.",
+      "remediation": "Inspect the project, present the plan, and write .kessler/cache/implementation-plan.json with the file-write tool."
+    },
+    {
+      "id": "KES-PLAN-002",
+      "title": "Direct edit outside planned file scope",
+      "severity": "R2",
+      "kind": "planning",
+      "action": "deny",
+      "patterns": [],
+      "summary": "Blocks a direct file edit when its target path is absent from the registered implementation plan.",
+      "remediation": "Revise and re-present the plan to include the exact file, placement, method, and reason before editing."
+    },
+    {
+      "id": "KES-VER-001",
+      "title": "Executable verification required",
+      "severity": "R2",
+      "kind": "completion",
+      "action": "verify",
+      "patterns": [],
+      "summary": "Requires successful relevant executable verification after source/config changes — including a real accessibility/design-QA check (axe, pa11y, Lighthouse CI) for UI work, when the project has one.",
+      "remediation": "Run the most relevant detected test, build, lint, typecheck, design/accessibility, or project-specific check after the latest write."
+    },
+    {
+      "id": "KES-READ-001",
+      "title": "Discovery cited without read evidence",
+      "severity": "R2",
+      "kind": "planning",
+      "action": "deny",
+      "patterns": [],
+      "summary": "Blocks plan registration when a discovery[] entry cites a file the session has no recorded read/view evidence for — the file existing is not enough, its content must have actually been opened.",
+      "remediation": "Read or view each file cited in discovery with the read tool before writing the plan; the read must happen before the plan is registered."
+    }
+  ]
+}

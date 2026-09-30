@@ -1,0 +1,10 @@
+$ErrorActionPreference = "Stop"
+python -m pip install .
+Write-Host "Kessler CLI installed. No agent configuration was modified automatically."
+Write-Host "Recommended next steps:"
+Write-Host "  kessler init"
+Write-Host "  kessler budget"
+Write-Host "  kessler install --target antigravity --scope user --surface ide"
+Write-Host "  kessler install --target antigravity --scope user --surface cli"
+Write-Host "  kessler install --target gemini --scope user"
+Write-Host "  kessler doctor --target package --deep"
